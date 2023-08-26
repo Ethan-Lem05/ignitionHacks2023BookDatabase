@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- Q&A PAGE -->
+    <!-- HOME PAGE -->
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.html">Book Website</a>
+        <a class="navbar-brand" href="{{ url_for('home')}}">Book Website</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,20 +33,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
+              <a class="nav-link active" aria-current="page" href="{{ url_for('home')}}"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="trending.html">Trending</a>
+              <a class="nav-link" href="{{ url_for('trending')}}">Trending</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="response.html">Book Lists</a>
+              <a class="nav-link" href="{{ url_for('response') }}">Book Lists</a>
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="questions.html"
+                href="{{ url_for('questions')}}"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -55,18 +55,18 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="questions.html"
+                  <a class="dropdown-item" href="{{ url_for('questions')}}"
                     >Common Question 1</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="questions.html"
+                  <a class="dropdown-item" href="{{ url_for('questions')}}"
                     >Common Question 2</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="questions.html"
+                  <a class="dropdown-item" href="{{ url_for('questions')}}"
                     >Other Questions</a
                   >
                 </li>
@@ -77,8 +77,8 @@
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Please enter a book title, genre or name of an author"
-              aria-label="Please enter a book title, genre or name of an author "
+              placeholder="Please enter a genre or name of an author"
+              aria-label="Please enter a genre or name of an author "
             />
             <button class="btn btn-outline-success" type="submit">
               Search
@@ -87,28 +87,64 @@
         </div>
       </div>
     </nav>
-    <!-- Q&A PAGE BODY -->
+    <!-- HOME PAGE BODY -->
+
+    <div class="container my-5">
+      <div
+        class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
+      >
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
+            Welcome to the book website!
+          </h1>
+          <p class="lead">Home of the best book website ever!</p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+          >
+            <a
+              class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
+              href="{{ url_for('trending')}}"
+              >Trending Books</a
+            >
+            <a
+              class="btn btn-outline-secondary btn-lg px-4"
+              href="{{ url_for('response')}}"
+              >Book Lists</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img
+            class="rounded-lg-3"
+            src="./static/assets/images/apple-books_reading-now_06122018_big.jpg.large.png"
+            alt="Book front app"
+            width="370"
+          />
+        </div>
+      </div>
+    </div>
+
     <!-- FOOTER -->
     <div class="container">
       <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item">
-            <a href="home.html" class="nav-link px-2 text-body-secondary"
+            <a href="{{ url_for('home')}}" class="nav-link px-2 text-body-secondary"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a href="trending.html" class="nav-link px-2 text-body-secondary"
+            <a href="{{ url_for('trending')}}" class="nav-link px-2 text-body-secondary"
               >Trending</a
             >
           </li>
           <li class="nav-item">
-            <a href="response.html" class="nav-link px-2 text-body-secondary"
+            <a href="{{ url_for('response')}}" class="nav-link px-2 text-body-secondary"
               >Book Lists</a
             >
           </li>
           <li class="nav-item">
-            <a href="questions.html" class="nav-link px-2 text-body-secondary"
+            <a href="{{ url_for('questions')}}" class="nav-link px-2 text-body-secondary"
               >Q&A</a
             >
           </li>
