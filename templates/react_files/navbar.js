@@ -1,4 +1,6 @@
-function navbar() {
+import React from "react"
+
+function Navbar() {
     return (
       <div>
         {/* <!-- Navigation Bar --> */}
@@ -84,4 +86,6 @@ function navbar() {
       </div>
     );
   }
+
+export default Navbar
   
