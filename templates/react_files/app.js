@@ -2,6 +2,9 @@ import React from "react"
 import Navbar from "./navbar"
 import Footer from "./footer"
 
+//Need to include Bootstrap link and style.css in all tabs somehow
+//Change navbar to trending.js from trending.html
+
 function App() {
     return (
       <div>
@@ -48,6 +51,11 @@ function App() {
       </div>
       {/* <!-- FOOTER --> */}
       <Footer/>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+      ></script>
     </div>
     );
   }
