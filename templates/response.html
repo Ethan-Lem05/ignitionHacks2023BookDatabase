@@ -16,9 +16,10 @@
     <!-- BOOK LISTS PAGE -->
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+       <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.html">Book Website</a>
+        <a class="navbar-brand" href="{{ url_for('home')}}">Book Website</a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -33,20 +34,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
+
+              <a class="nav-link active" aria-current="page" href="{{ url_for('home')}}"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="trending.html">Trending</a>
+              <a class="nav-link" href="{{ url_for('trending')}}">Trending</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="response.html">Book Lists</a>
+              <a class="nav-link" href="{{ url_for('response')}}">Book Lists</a>
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="questions.html"
+
+                href="{{ url_for('questions')}}"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -55,18 +58,18 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="questions.html"
+                  <a class="dropdown-item" href="{{ url_for('questions')}}"
                     >Common Question 1</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="questions.html"
+                  <a class="dropdown-item" href="{{ url_for('questions')}}"
                     >Common Question 2</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="questions.html"
+                  <a class="dropdown-item" href="{{ url_for('questions')}}"
                     >Other Questions</a
                   >
                 </li>
@@ -77,8 +80,8 @@
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Please enter a book title, genre or name of an author"
-              aria-label="Please enter a book title, genre or name of an author "
+              placeholder="Please enter a genre or name of an author"
+              aria-label="Please enter a genre or name of an author "
             />
             <button class="btn btn-outline-success" type="submit">
               Search
@@ -87,28 +90,185 @@
         </div>
       </div>
     </nav>
+    <div class="d-flex flex-nowrap"><div class="flex-shrink-0 p-3" style="width: 280px;">
+<!--    <a href=" {{ url_for('home') }}" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">-->
+<!--      <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>-->
+<!--      <span class="fs-5 fw-semibold">The Book Website</span>-->
+<!--    </a>-->
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+          Genre
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Genre 1</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Genre 2</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Genre 3</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          Author
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Author 1</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Author 2</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Author 3</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Author 4</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+          Orders
+        </button>
+        <div class="collapse" id="orders-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+          </ul>
+        </div>
+      </li>
+<!--      <li class="border-top my-3"></li>-->
+<!--      <li class="mb-1">-->
+<!--        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">-->
+<!--          Account-->
+<!--        </button>-->
+<!--        <div class="collapse" id="account-collapse">-->
+<!--          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">-->
+<!--            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>-->
+<!--            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>-->
+<!--            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>-->
+<!--            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </li>-->
+    </ul>
+  </div>
     <!-- BOOK LISTS PAGE BODY -->
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary" style="width: 380px;">
+    <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-body-emphasis text-decoration-none border-bottom">
+      <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-5 fw-semibold">List group</span>
+    </a>
+    <div class="list-group list-group-flush border-bottom scrollarea">
+      <a href="#" class="list-group-item list-group-item-action active py-3 lh-sm" aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small>Wed</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Tues</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Mon</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Wed</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Tues</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Mon</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Wed</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Tues</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Mon</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Wed</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Tues</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <strong class="mb-1">List group item heading</strong>
+          <small class="text-body-secondary">Mon</small>
+        </div>
+        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+      </a>
+    </div>
+  </div>
+    </div>
+
+
     <!-- FOOTER -->
-    <div class="container">
+     <div class="container">
       <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item">
-            <a href="home.html" class="nav-link px-2 text-body-secondary"
+            <a href="{{ url_for('home')}}" class="nav-link px-2 text-body-secondary"
+
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a href="trending.html" class="nav-link px-2 text-body-secondary"
+            <a href="{{ url_for('trending')}}" class="nav-link px-2 text-body-secondary"
               >Trending</a
             >
           </li>
           <li class="nav-item">
-            <a href="response.html" class="nav-link px-2 text-body-secondary"
+            <a href="{{ url_for('response')}}" class="nav-link px-2 text-body-secondary"
               >Book Lists</a
             >
           </li>
           <li class="nav-item">
-            <a href="questions.html" class="nav-link px-2 text-body-secondary"
+            <a href="{{ url_for('questions')}}" class="nav-link px-2 text-body-secondary"
               >Q&A</a
             >
           </li>

@@ -1,3 +1,4 @@
+
 from flask import Flask
 from flask import render_template;
 from flask import request;
@@ -36,4 +37,3 @@ if __name__ == "__main__":
 def parse_questions_to_query(request):
     #process race 
     race = request.form
-
