@@ -10,7 +10,7 @@
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
   </head>
   <body>
     <!-- HOME PAGE -->
@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('home')}}"
+              <a class="nav-link active" aria-current="page" href="home.html"
                 >Home</a
               >
             </li>
@@ -41,7 +41,7 @@
               <a class="nav-link" href="{{ url_for('trending')}}">Trending</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('response') }}">Book Lists</a>
+              <a class="nav-link" href="{{ url_for('response')}}">Book Lists</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -56,18 +56,18 @@
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="{{ url_for('questions')}}"
-                    >Common Question 1</a
+                    >Action</a
                   >
                 </li>
                 <li>
                   <a class="dropdown-item" href="{{ url_for('questions')}}"
-                    >Common Question 2</a
+                    >Another action</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                   <a class="dropdown-item" href="{{ url_for('questions')}}"
-                    >Other Questions</a
+                    >Something else here</a
                   >
                 </li>
               </ul>
@@ -77,8 +77,8 @@
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Please enter a genre or name of an author"
-              aria-label="Please enter a genre or name of an author "
+              placeholder="Enter a genre/name of an author"
+              aria-label="Enter a genre/name of an author "
             />
             <button class="btn btn-outline-success" type="submit">
               Search
@@ -102,6 +102,7 @@
             class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
           >
             <a
+              type="button"
               class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
               href="{{ url_for('trending')}}"
               >Trending Books</a
@@ -129,22 +130,30 @@
       <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item">
-            <a href="{{ url_for('home')}}" class="nav-link px-2 text-body-secondary"
+            <a
+              href="{{ url_for('home')}}"
+              class="nav-link px-2 text-body-secondary"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a href="{{ url_for('trending')}}" class="nav-link px-2 text-body-secondary"
+            <a
+              href="{{ url_for('trending')}}"
+              class="nav-link px-2 text-body-secondary"
               >Trending</a
             >
           </li>
           <li class="nav-item">
-            <a href="{{ url_for('response')}}" class="nav-link px-2 text-body-secondary"
+            <a
+              href="{{ url_for('response')}}"
+              class="nav-link px-2 text-body-secondary"
               >Book Lists</a
             >
           </li>
           <li class="nav-item">
-            <a href="{{ url_for('questions')}}" class="nav-link px-2 text-body-secondary"
+            <a
+              href="{{ url_for('questions')}}"
+              class="nav-link px-2 text-body-secondary"
               >Q&A</a
             >
           </li>
