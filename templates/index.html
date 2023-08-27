@@ -18,7 +18,8 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.html">Book Website</a>
+        <a class="navbar-brand" href="{{ url_for('home')}}">Book Website</a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -33,52 +34,29 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{{ url_for('home')}}"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="trending.html">Trending</a>
+              <a class="nav-link" href="{{ url_for('trending')}}">Trending</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="response.html">Book Lists</a>
+              <a class="nav-link" href="{{ url_for('response')}}">Book Lists</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="questions.html"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Q&A
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="questions.html"
-                    >Common Question 1</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="questions.html"
-                    >Common Question 2</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="questions.html"
-                    >Other Questions</a
-                  >
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('questions')}}"> Q&A </a>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Please enter a book title, genre or name of an author"
-              aria-label="Please enter a book title, genre or name of an author "
+              placeholder="Enter a genre/ name of an author"
+              aria-label="Enter a genre/ name of an author "
             />
             <button class="btn btn-outline-success" type="submit">
               Search

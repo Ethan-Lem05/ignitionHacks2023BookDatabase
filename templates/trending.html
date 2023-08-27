@@ -10,7 +10,7 @@
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href=".static/css/style.css" />
   </head>
   <body>
     <!-- TRENDING PAGE -->
@@ -47,34 +47,8 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('response')}}">Book Lists</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="{{ url_for('questions')}}"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Q&A
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="{{ url_for('questions')}}"
-                    >Common Question 1</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{{ url_for('questions')}}"
-                    >Common Question 2</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="{{ url_for('questions')}}"
-                    >Other Questions</a
-                  >
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('questions')}}"> Q&A </a>
             </li>
           </ul>
           <form class="d-flex" role="search">
