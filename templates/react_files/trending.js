@@ -11,103 +11,197 @@ function Trending (){
     <Navbar/>
         
     {/* <!-- TRENDING PAGE BODY --> */}
-      <div>
-        <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src="..." className="d-block w-100" alt="Hello"/>
-            </div>
-            <div className="carousel-item">
-              <img src="..." className="d-block w-100" alt="World"/>
-            </div>
-            <div className="carousel-item">
-              <img src="..." className="d-block w-100" alt="!"/>
-            </div>
+    <div>
+      <div
+        id="carouselExampleAutoplaying"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img
+              src="./static/assets/images/ataleforthetimebeing.jpeg"
+              className="d-block w-100"
+              alt="A tale for the time being"
+            />
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+          <div className="carousel-item">
+            <img
+              src="./static/assets/images/doubtingthomas.jpeg"
+              className="d-block w-100"
+              alt="Doubting Thomas"
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src="./static/assets/images/fiebretropical.jpeg"
+              className="d-block w-100"
+              alt="Fiebre Tropical"
+            />
+          </div>
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div className="container marketing">
+      {/* <!-- Three columns of text below the carousel --> */}
+      <div className="row">
+        <div className="col-lg-4">
+          <img
+            src="https://i.guim.co.uk/img/media/5c31b21be07d49876dd77ed77b262f9bb458892d/0_441_6634_3981/master/6634.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=586dd064f4de20ec52a235d8686f58b9"
+            alt="Ruth Ozenki"
+            className="rounded-circle"
+            width="140"
+            height="140"
+          />
+          <h2 className="fw-normal">Ruth Ozenki</h2>
+          <p>
+            Ruth Ozeki is an American-Canadian author, filmmaker and Zen
+            Buddhist priest.
+          </p>
+          <p><a className="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        {/* <!-- /.col-lg-4 --> */}
+        <div className="col-lg-4">
+          <img
+            src="https://s26162.pcdn.co/wp-content/uploads/2021/06/Ethan-Rutherford-300x300.jpg"
+            alt="Matthew Clark Davison"
+            className="rounded-circle"
+            width="140"
+            height="140"
+          />
+          <h2 className="fw-normal">Matthew Clark Davison</h2>
+          <p>
+            Matthew Clark Davison is a writer and educator living in San
+            Francisco.
+          </p>
+          <p><a className="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        {/* <!-- /.col-lg-4 --> */}
+        <div className="col-lg-4">
+          <img
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRmtrT-IjzY3evHqjX0ZODj7dATCEtDnxIPLPrNR_vx736IYRyN"
+            alt="Julián Delgado Lopera"
+            className="rounded-circle"
+            width="140"
+            height="140"
+          />
+          <h2 className="fw-normal">Julián Delgado Lopera</h2>
+          <p>
+            Julián Delgado Lopera is a queer Colombian writer and performer.
+          </p>
+          <p><a className="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        {/* <!-- /.col-lg-4 --> */}
+      </div>
+      {/* <!-- /.row --> */}
+
+      {/* <!-- START THE FEATURETTES --> */}
+
+      <hr className="featurette-divider" />
+
+      <div className="row featurette">
+        <div className="col-md-7">
+          <h2 className="featurette-heading fw-normal lh-1">
+            NightCrawling
+            <span className="text-body-secondary">Leila Mottley</span>
+          </h2>
+          <p className="lead">
+            Based on a true crime in 2015 involving institutional exploitation,
+            brutality and corruption in the Oakland police department,
+            Nightcrawling gives voice to 17-year-old Kiara Johnson, who, after
+            her father's death and mother's detention in a rehab facility,
+            becomes a sex worker to pay for rent hikes.
+          </p>
+        </div>
+        <div className="col-md-5">
+          <img
+            src="./static/assets/images/nightcrawling.jpeg"
+            alt="NightCrawling"
+            width="500"
+            height="500"
+          />
         </div>
       </div>
 
-      <div className="container marketing">
+      <hr className="featurette-divider" />
 
-        {/* <!-- Three columns of text below the carousel --> */}
-        <div className="row">
-          <div className="col-lg-4">
-            <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-            <h2 className="fw-normal">Heading</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a className="btn btn-secondary" href="#">View details »</a></p>
-          </div>
-          {/* <!-- /.col-lg-4 --> */}
-          <div className="col-lg-4">
-            <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-            <h2 className="fw-normal">Heading</h2>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <p><a className="btn btn-secondary" href="#">View details »</a></p>
-          </div>
-          {/* <!-- /.col-lg-4 --> */}
-          <div className="col-lg-4">
-            <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-            <h2 className="fw-normal">Heading</h2>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-            <p><a className="btn btn-secondary" href="#">View details »</a></p>
-          </div>
-          {/* <!-- /.col-lg-4 --> */}
+      <div className="row featurette">
+        <div className="col-md-7 order-md-2">
+          <h2 className="featurette-heading fw-normal lh-1">
+            No Honour
+            <span className="text-body-secondary">Awais Khan</span>
+          </h2>
+          <p className="lead">
+            A young woman defies convention in a small Pakistani village, with
+            devastating results for her and her family. A stunning, immense
+            beautiful novel about courage, family and the meaning of love, when
+            everything seems lost...
+          </p>
         </div>
-        {/* <!-- /.row --> */}
-    
-        {/* <!-- START THE FEATURETTES --> */}
-    
-        <hr className="featurette-divider"/>
-    
-        <div className="row featurette">
-          <div className="col-md-7">
-            <h2 className="featurette-heading fw-normal lh-1">First featurette heading. <span className="text-body-secondary">It’ll blow your mind.</span></h2>
-            <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-          </div>
-          <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-          </div>
+        <div className="col-md-5 order-md-1">
+          <img
+            src="./static/assets/images/nohonour.jpeg"
+            alt="No honour"
+            width="500"
+            height="500"
+          />
         </div>
-    
-        <hr className="featurette-divider"/>
-    
-        <div className="row featurette">
-          <div className="col-md-7 order-md-2">
-            <h2 className="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span className="text-body-secondary">See for yourself.</span></h2>
-            <p className="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-          </div>
-          <div className="col-md-5 order-md-1">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-          </div>
-        </div>
-    
-        <hr className="featurette-divider"/>
-    
-        <div className="row featurette">
-          <div className="col-md-7">
-            <h2 className="featurette-heading fw-normal lh-1">And lastly, this one. <span className="text-body-secondary">Checkmate.</span></h2>
-            <p className="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-          </div>
-          <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-          </div>
-        </div>
-    
-        <hr className="featurette-divider"/>
-    
-        {/* <!-- /END THE FEATURETTES --> */}
       </div>
+
+      <hr className="featurette-divider" />
+
+      <div className="row featurette">
+        <div className="col-md-7">
+          <h2 className="featurette-heading fw-normal lh-1">
+            Sour Heart
+            <span className="text-body-secondary">Jenny Zhang</span>
+          </h2>
+          <p className="lead">
+            Narrated by the daughters of Chinese immigrants who fled imperiled
+            lives as artists back home only to struggle to stay afloat —
+            dumpster diving for food and scamming Atlantic City casino buses to
+            make a buck — these seven stories showcase Zhang's compassion and
+            moral courage, and a darkly funny and intimate rendering of
+            girlhood.
+          </p>
+        </div>
+        <div className="col-md-5">
+          <img
+            src="./static/assets/images/sourheart.jpeg"
+            alt="Sour Heart"
+            width="500"
+            height="500"
+          />
+        </div>
+      </div>
+
+      <hr className="featurette-divider" />
+
+    {/* <!-- /END THE FEATURETTES --> */}
+    </div>
 
     {/* <!-- FOOTER --> */}
     <Footer/>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
