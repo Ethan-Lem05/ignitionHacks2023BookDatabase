@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8a0abf4f-00e3-4650-87ca-f30b5df17c8d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +24,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Adams-Branch",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/GitHub Desktop/ignitionHacks2023BookDatabase"
   }
